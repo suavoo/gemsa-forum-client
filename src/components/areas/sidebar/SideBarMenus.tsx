@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faRegistered } from "@fortawesome/free-solid-svg-icons"
 import React, { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { AppState } from "../../store/AppState"
-import { UserProfileSetType } from "../../store/user/Reducer"
+import { AppState } from "../../../store/AppState"
+import { UserProfileSetType } from "../../../store/user/Reducer"
 import './SideBarMenus.css'
-import Registration from "../auth/Registration"
+import Registration from "../../auth/Registration"
 
 
 const SideBarMenus = () => {

@@ -1,23 +1,16 @@
 import React from 'react';
 import './App.css';
-import LeftMenu from './components/LeftMenu';
-import Main from './components/Main';
-import Nav from './components/Nav';
-import RightMenu from './components/RightMenu';
-import SideBar from './components/sidebar/SideBar';
-import ErrorBoundary from './components/ErrorBoundary';
+import Home from './components/routes/Home';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  //const renderHome = (props: any) => <Home {...props} />
+
   return (
-    <div className="App">
-      <ErrorBoundary>
-        <Nav />
-        <SideBar />
-        <LeftMenu />
-        <Main />
-        <RightMenu />
-      </ErrorBoundary>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/categorythreads/:categoryId" element={<Home />} />
+    </Routes>
   );
 }
 
